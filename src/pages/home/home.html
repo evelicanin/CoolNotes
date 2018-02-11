@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
-    </ion-title>
+      CoolNotes <ion-icon name="add-circle" class="add-circle" (click)="addNote()"></ion-icon>
+    </ion-title>  
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-list>      
+      <button ion-item *ngFor="let note of notes | async" (click)="getNote(note.createdDate)"> 
+        <span class="date"> {{ note.date }}</span>{{ note.title }}
+      </button>
+    </ion-list>  
+
+    <div text-center>
+        <button ion-button (click)="addNote()">Add note
+        </button>
+    </div>
 </ion-content>
+
+
+
+

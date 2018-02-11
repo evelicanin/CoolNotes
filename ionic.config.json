@@ -1,6 +1,8 @@
 {
   "name": "CoolNotes",
-  "app_id": "",
+  "app_id": "925e04ee",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }
